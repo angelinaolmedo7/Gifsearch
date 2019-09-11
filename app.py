@@ -11,9 +11,9 @@ def index():
     # Extract query term from url
     search_term = request.args.get('search_term')
     # TODO: Make 'params' dict with query term and API key
-
+    params = {'query term': search_term, 'API key': 'FFZUQ4CLKXOZ'}
     # TODO: Make an API call to Tenor using the 'requests' library
-
+    
     # TODO: Get the first 10 results from the search results
 
     # TODO: Render the 'index.html' template, passing the gifs as a named parameter
