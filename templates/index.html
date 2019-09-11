@@ -14,7 +14,7 @@
     <button type='submit'>Search</button>
 </form>
 
-{% for gif in top_10gifs %} 
+{% for gif in gifs %}
     {% include 'gif.html' %}
 {% endfor %}
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
