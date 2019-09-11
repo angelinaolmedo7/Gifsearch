@@ -4,17 +4,21 @@
 
 
 {% block body %}
+<!-- TODO: Make an HTML form containing a search box and a submit button to add
+    the search term to the query string -->
 <form action='/'>
     <p>
         Search:
-        <input type="text" name="search_term"/>
+        <input type='text' name='search_term'/>
     </p>
-    <button type="submit">Search</button>
+    <button type='submit'>Search</button>
 </form>
-{% endblock body %}
-<!-- TODO: Make an HTML form containing a search box and a submit button to add
-    the search term to the query string -->
 
+{% for gif in top_10gifs %} 
+    {% include 'gif.html' %}
+{% endfor %}
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
 
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->
+
+{% endblock body %}
