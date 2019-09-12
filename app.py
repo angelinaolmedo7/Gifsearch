@@ -14,15 +14,20 @@ def index():
     # Make 'params' dict with query term and API key
     params = {'q': search_term, 'key': 'FFZUQ4CLKXOZ', 'limit': 10}
 
+    urls = []
     # Make an API call to Tenor using the 'requests' library
     # Get the first 10 results from the search results
     r = requests.get(
         "https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s" %
         (params['q'], params['key'], params['limit']))
-    gifs = json.loads(r.content)['results']
+    json_data = r.json()['results']
+    for i in range(len(json_data)):
+        url = json_data[i]['media'][0]['gif']['url']
+        urls.append(url)
+    print(urls)
     # Render the 'index.html' template, passing the gifs as a named parameter
 
-    return render_template("index.html", gifs=gifs)
+    return render_template("index.html", urls=urls)
 
 
 if __name__ == '__main__':
