@@ -13,9 +13,12 @@
     </p>
     <button type='submit'>Search</button>
 </form>
-
+{% if trending %}
+    <p>
+    Trending Gifs
+    </p>
+{% endif %}
 {% for url in urls %}
-    Test
     {% include 'gif.html' %}
 {% endfor %}
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
