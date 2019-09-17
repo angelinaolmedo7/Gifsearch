@@ -20,17 +20,15 @@ def index():
     # Make an API call to Tenor using the 'requests' library
     # Get the first 10 results from the search results
     if trending:
-        params['q'] = requests.get(
-                    "https://api.tenor.com/v1/trending_terms?key=%s&limit=%s"
-                    % (params['key'], 1))
-        # print(r.json()['results'])
-    r = requests.get(
-        "https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s" %
-        (params['q'], params['key'], params['limit']))
+        r = requests.get("https://api.tenor.com/v1/trending?key=%s&limit=%s" %
+                         (params['key'], params['limit']))
+    else:
+        r = requests.get(
+            "https://api.tenor.com/v1/search?q=%s&key=%s&limit=%s" %
+            (params['q'], params['key'], params['limit']))
 
     json_data = r.json()['results']
     for i in range(len(json_data)):
-        print(i)
         url = json_data[i]['media'][0]['gif']['url']
         urls.append(url)
     # print(urls)
