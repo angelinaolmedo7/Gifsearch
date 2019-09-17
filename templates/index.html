@@ -21,6 +21,9 @@
 {% for url in urls %}
     {% include 'gif.html' %}
 {% endfor %}
+{% if urls|length == 0 %}
+    Sorry! No GIFs found with that search.
+{% endif %}
 <!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
 
 <!-- TODO: For each gif, include the 'gif.html' template to display it -->
