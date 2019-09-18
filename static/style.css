@@ -20,3 +20,8 @@ body {
     padding-bottom: 10px;
 }
 
+#gifs {
+    /* align-items: center; */
+    width: 100%;
+    text-align: center;
+}

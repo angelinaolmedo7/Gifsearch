@@ -16,20 +16,19 @@
         <button type='submit'>Search</button>
     </form>
 </div>
-
-{% if trending %}
-    <p>
-    Trending GIFs
-    </p>
-{% endif %}
-{% for url in urls %}
-    {% include 'gif.html' %}
-{% endfor %}
-{% if urls|length == 0 %}
-    Sorry! No GIFs found with that search.
-{% endif %}
-<!-- TODO: Make a for loop to loop over GIFs passed in from the server -->
-
-<!-- TODO: For each gif, include the 'gif.html' template to display it -->
-
+<div id='gifs'>
+    {% if trending %}
+        <p>
+        Trending GIFs
+        </p>
+    {% endif %}
+    <!-- For loop to loop over GIFs passed in from the server -->
+    {% for url in urls %}
+        <!-- For each gif, include the 'gif.html' template to display it -->
+        {% include 'gif.html' %}
+    {% endfor %}
+    {% if urls|length == 0 %}
+        Sorry! No GIFs found with that search.
+    {% endif %}
+</div>
 {% endblock body %}
