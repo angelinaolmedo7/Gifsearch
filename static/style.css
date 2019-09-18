@@ -1,8 +1,6 @@
 h1 {
     font-size: 100px;
     font-family: Arial, Helvetica, sans-serif;
-    float: center;
-    margin-left: 50%;
 }
 
 body {
@@ -11,5 +9,12 @@ body {
 
 #title {
     color: #393F40;
+    margin-top: 0;
+    height: 300px;
+    width: 100%;
+    text-align: center;
+    background-color: #ACBDBF;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
