@@ -5,9 +5,21 @@ h1 {
 }
 
 body {
-    background-color: #E5FBFE;
+    /* lightest color */
+    /* background-color: #E5FBFE; */
+    background-color: #FFECE6;
     font-family: Arial, Helvetica, sans-serif;
-    color: #393F40;
+    /* darkest color
+    color: #393F40; */
+    color: #805A4D;
+}
+
+img {
+    border-style: solid;
+    /* second darkest color
+    border-color: #737E80; */
+    border-color: #FFB399;
+    border-width: thick;
 }
 
 #title {
@@ -15,7 +27,9 @@ body {
     height: 250px;
     width: 100%;
     text-align: center;
-    background-color: #ACBDBF;
+    /* second lightest color
+    background-color: #ACBDBF; */
+    background-color: #CCBDB8;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -25,10 +39,18 @@ body {
     text-align: center;
 }
 
+.one_gif {
+    margin-top: 20px;
+}
+
 button {
     height: 45px;
     width: 150px;
     font-size: 20px;
+    background-color: #FFB399;
+    border-color: #805A4D;
+    color: #805A4D;
+    border-radius: 10px;
 }
 
 input {
@@ -36,4 +58,6 @@ input {
     width: 300px;
     font-size: 20px;
     text-align: center;
+    border-radius: 10px;
+
 }
