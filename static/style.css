@@ -1,0 +1,15 @@
+h1 {
+    font-size: 100px;
+    font-family: Arial, Helvetica, sans-serif;
+    float: center;
+    margin-left: 50%;
+}
+
+body {
+    background-color: #E5FBFE;
+}
+
+#title {
+    color: #393F40;
+}
+
