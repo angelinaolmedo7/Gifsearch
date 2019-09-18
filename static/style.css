@@ -1,18 +1,18 @@
 h1 {
     font-size: 100px;
-    font-family: Arial, Helvetica, sans-serif;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
 body {
     background-color: #E5FBFE;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #393F40;
 }
 
 #title {
-    color: #393F40;
     margin-top: 0;
-    height: 200px;
+    height: 250px;
     width: 100%;
     text-align: center;
     background-color: #ACBDBF;
@@ -21,7 +21,19 @@ body {
 }
 
 #gifs {
-    /* align-items: center; */
     width: 100%;
+    text-align: center;
+}
+
+button {
+    height: 45px;
+    width: 150px;
+    font-size: 20px;
+}
+
+input {
+    height: 35px;
+    width: 300px;
+    font-size: 20px;
     text-align: center;
 }
