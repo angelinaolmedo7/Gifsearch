@@ -1,3 +1,4 @@
+"""Gif Search uses the Tenor API to create a worse version of Tenor."""
 from flask import Flask, render_template, request
 from random import choice
 import requests
@@ -8,7 +9,12 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    """Return homepage."""
+    """
+    Return homepage.
+
+    The first load of the page should display trending gifs. From there, a user
+    can use the search bar to find gifs by search terms.
+    """
     # Extract query term from url
     search_term = request.args.get('search_term')
     print(search_term)

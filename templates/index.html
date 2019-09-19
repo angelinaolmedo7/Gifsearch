@@ -6,17 +6,20 @@
 {% block body %}
 <div id='title'>
    <h1>Find Gifs!</h1>
-    <!-- TODO: Make an HTML form containing a search box and a submit button to add
+   <!-- Make an HTML form containing a search box and a submit button to add
         the search term to the query string -->
     <form action='/'>
         <p>
+            <!-- Create search bar -->
             <input type='text' placeholder="Search Tenor..." name='search_term'/>
         </p>
+        <!-- Create search button -->
         <button type='submit'>Search</button>
     </form>
 </div>
 <div id='gifs'>
     {% if trending %}
+        <!-- Title the GIFs section "Trending Gifs" if trending is being displayed -->
         <p>
         Trending GIFs
         </p>
@@ -29,6 +32,7 @@
         </div>
     {% endfor %}
     {% if urls|length == 0 %}
+        <!-- Display message if no GIFs are found -->
         Sorry! No GIFs found with that search.
     {% endif %}
 </div>
